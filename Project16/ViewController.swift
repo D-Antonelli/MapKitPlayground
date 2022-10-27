@@ -8,10 +8,48 @@
 import UIKit
 import MapKit
 
+//@IBDesignable extension UIView {
+//    @IBInspectable var cornerRadius: CGFloat {
+//        get { return layer.cornerRadius }
+//        set {
+//            layer.cornerRadius = newValue
+//
+//            // If masksToBounds is true, subviews will be
+//            // clipped to the rounded corners.
+//            layer.masksToBounds = (newValue > 0)
+//        }
+//    }
+//}
+
+extension UIStackView {
+    public func roundBorders(corners: UIRectCorner.Element, radius: CGFloat) {
+        let corners = UIRectCorner(arrayLiteral: corners)
+        
+        // Determine the size of the rounded corners
+        let cornerRadii = CGSize(width: radius, height: radius)
+        
+        let maskPath = UIBezierPath(
+            roundedRect: self.bounds,
+            byRoundingCorners: corners,
+            cornerRadii: cornerRadii
+        )
+        
+        // Apply the mask layer to the view
+        let maskLayer = CAShapeLayer()
+        maskLayer.path = maskPath.cgPath
+        maskLayer.frame = self.bounds
+
+        self.layer.mask = maskLayer
+    }
+}
+
 class ViewController: UIViewController, MKMapViewDelegate {
     
+    @IBOutlet weak var StackView: UIStackView!
     @IBOutlet weak var ViewButton: UIButton!
     @IBOutlet weak var mapView: MKMapView!
+    
+    
     
     @IBAction func updateMapView(_ sender: UIButton) {
 //        action here
@@ -29,6 +67,9 @@ class ViewController: UIViewController, MKMapViewDelegate {
         let washington = Capital(title: "Washington DC", coordinate: CLLocationCoordinate2D(latitude: 38.895111, longitude: -77.036667), info: "Named after George himself.")
         
         mapView.addAnnotations([london, oslo, paris, rome, washington])
+        
+        StackView.roundBorders(corners: [UIRectCorner.topLeft, UIRectCorner.topRight], radius: 15.0)
+        
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
