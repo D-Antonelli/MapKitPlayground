@@ -8,19 +8,6 @@
 import UIKit
 import MapKit
 
-//@IBDesignable extension UIView {
-//    @IBInspectable var cornerRadius: CGFloat {
-//        get { return layer.cornerRadius }
-//        set {
-//            layer.cornerRadius = newValue
-//
-//            // If masksToBounds is true, subviews will be
-//            // clipped to the rounded corners.
-//            layer.masksToBounds = (newValue > 0)
-//        }
-//    }
-//}
-
 extension UIStackView {
     public func roundBorders(corners: UIRectCorner.Element, radius: CGFloat) {
         let corners = UIRectCorner(arrayLiteral: corners)
