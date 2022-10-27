@@ -30,6 +30,8 @@ extension UIStackView {
     }
 }
 
+// https://developer.apple.com/documentation/uikit/view_layout
+
 class ViewController: UIViewController, MKMapViewDelegate {
     
     @IBOutlet weak var StackView: UIStackView!

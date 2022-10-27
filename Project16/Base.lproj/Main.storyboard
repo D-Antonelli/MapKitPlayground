@@ -14,19 +14,19 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project16" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gOL-Sl-gAw">
-                                <rect key="frame" x="0.0" y="91" width="390" height="719"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gOL-Sl-gAw">
+                                <rect key="frame" x="0.0" y="91" width="433.33333333333331" height="0.0"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="aap-jm-yM9"/>
                                 </connections>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Wjs-7C-n6d">
-                                <rect key="frame" x="327" y="104" width="54" height="51"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Wjs-7C-n6d" userLabel="Show Options Button">
+                                <rect key="frame" x="326" y="104" width="55" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="eCZ-mr-X5V"/>
@@ -53,12 +53,12 @@
                                     <action selector="updateMapView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hwq-ji-Jdk"/>
                                 </connections>
                             </button>
-                            <stackView contentMode="scaleAspectFit" axis="vertical" distribution="equalCentering" baselineRelativeArrangement="YES" id="rX0-Nn-tuX">
-                                <rect key="frame" x="0.0" y="596" width="390" height="248"/>
+                            <stackView contentMode="scaleAspectFit" axis="vertical" distribution="equalCentering" baselineRelativeArrangement="YES" id="rX0-Nn-tuX" userLabel="Popup View">
+                                <rect key="frame" x="0.0" y="596" width="389" height="248"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="z5W-Z0-RBG">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="34.333333333333336"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="z5W-Z0-RBG" userLabel="Menu View">
+                                        <rect key="frame" x="0.0" y="0.0" width="389" height="34.333333333333336"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dsm-vo-ZnV">
                                                 <rect key="frame" x="0.0" y="0.0" width="111" height="34.333333333333336"/>
@@ -66,18 +66,23 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ytG-u9-zL0">
-                                                <rect key="frame" x="315" y="0.0" width="75" height="34.333333333333336"/>
+                                                <rect key="frame" x="314" y="0.0" width="75" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="5cS-8u-kT7">
-                                        <rect key="frame" x="0.0" y="138" width="390" height="110"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="5cS-8u-kT7" userLabel="Selection View">
+                                        <rect key="frame" x="0.0" y="74.333333333333329" width="389" height="173.66666666666669"/>
                                     </stackView>
                                 </subviews>
                                 <viewLayoutGuide key="safeArea" id="nbE-Gy-CVF"/>
                                 <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                <constraints>
+                                    <constraint firstItem="z5W-Z0-RBG" firstAttribute="width" secondItem="nbE-Gy-CVF" secondAttribute="width" multiplier="0.8" id="Htz-GM-626"/>
+                                    <constraint firstItem="z5W-Z0-RBG" firstAttribute="centerX" secondItem="nbE-Gy-CVF" secondAttribute="centerX" id="XD8-FX-mhV"/>
+                                    <constraint firstItem="5cS-8u-kT7" firstAttribute="height" secondItem="rX0-Nn-tuX" secondAttribute="height" multiplier="0.7" id="Zi5-mS-Umv"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="0.0"/>
@@ -89,12 +94,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="gOL-Sl-gAw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5jQ-0D-3bl"/>
-                            <constraint firstItem="Wjs-7C-n6d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="327" id="Ci3-aC-7Yf"/>
-                            <constraint firstItem="Wjs-7C-n6d" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="11.333333333333343" id="aTt-97-Ndy"/>
-                            <constraint firstItem="gOL-Sl-gAw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="d9L-V3-3ib"/>
-                            <constraint firstItem="gOL-Sl-gAw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iOA-c4-WQE"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wjs-7C-n6d" secondAttribute="trailing" constant="9" id="miE-6T-IlN"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="gOL-Sl-gAw" secondAttribute="bottom" id="xAg-0O-qYQ"/>
+                            <constraint firstItem="gOL-Sl-gAw" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="Dxw-9e-s8e"/>
+                            <constraint firstItem="Wjs-7C-n6d" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="aTt-97-Ndy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wjs-7C-n6d" secondAttribute="trailing" constant="10" id="miE-6T-IlN"/>
+                            <constraint firstItem="gOL-Sl-gAw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ofE-Cc-LLH"/>
+                            <constraint firstItem="gOL-Sl-gAw" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" id="utk-cc-ZTX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="UJL-tH-94d"/>
