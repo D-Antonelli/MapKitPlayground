@@ -25,9 +25,12 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="aap-jm-yM9"/>
                                 </connections>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wjs-7C-n6d">
-                                <rect key="frame" x="327" y="105" width="54" height="51"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Wjs-7C-n6d">
+                                <rect key="frame" x="327" y="104" width="54" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="eCZ-mr-X5V"/>
+                                </constraints>
                                 <color key="tintColor" systemColor="linkColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal">
@@ -50,13 +53,22 @@
                                     <action selector="updateMapView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hwq-ji-Jdk"/>
                                 </connections>
                             </button>
+                            <stackView contentMode="scaleAspectFit" distribution="equalSpacing" alignment="center" id="rX0-Nn-tuX">
+                                <rect key="frame" x="0.0" y="596" width="390" height="248"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="safeArea" id="nbE-Gy-CVF"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="gOL-Sl-gAw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5jQ-0D-3bl"/>
+                            <constraint firstItem="Wjs-7C-n6d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="327" id="Ci3-aC-7Yf"/>
+                            <constraint firstItem="Wjs-7C-n6d" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="11.333333333333343" id="aTt-97-Ndy"/>
                             <constraint firstItem="gOL-Sl-gAw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="d9L-V3-3ib"/>
                             <constraint firstItem="gOL-Sl-gAw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iOA-c4-WQE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wjs-7C-n6d" secondAttribute="trailing" constant="9" id="miE-6T-IlN"/>
                             <constraint firstAttribute="bottomMargin" secondItem="gOL-Sl-gAw" secondAttribute="bottom" id="xAg-0O-qYQ"/>
                         </constraints>
                     </view>
