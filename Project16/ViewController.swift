@@ -52,9 +52,11 @@ class ViewController: UIViewController, MKMapViewDelegate {
     
     
     @IBAction func updateMapView(_ sender: UIButton) {
+        StackView.isHidden = false
 //        action here
 //        mapView.preferredConfiguration = MKImageryMapConfiguration()
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,7 +70,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         
         mapView.addAnnotations([london, oslo, paris, rome, washington])
         
-        StackView.roundBorders(corners: [UIRectCorner.topLeft, UIRectCorner.topRight], radius: 15.0)
+        initStackView()
         
     }
     
@@ -110,5 +112,9 @@ class ViewController: UIViewController, MKMapViewDelegate {
             present(ac, animated: true)
     }
     
+    func initStackView() {
+        StackView.isHidden = true
+        StackView.roundBorders(corners: [UIRectCorner.topLeft, UIRectCorner.topRight], radius: 15.0)
+    }
 }
 
