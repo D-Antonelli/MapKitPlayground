@@ -47,6 +47,17 @@ class ViewController: UIViewController, MKMapViewDelegate {
     }
     
     
+    
+    @IBAction func setNormalMapView(_ sender: UIButton) {
+         mapView.preferredConfiguration = MKStandardMapConfiguration()
+    }
+    
+    
+    @IBAction func setSatelliteMapView(_ sender: UIButton) {
+        mapView.preferredConfiguration = MKImageryMapConfiguration()
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

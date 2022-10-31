@@ -19,14 +19,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gOL-Sl-gAw">
-                                <rect key="frame" x="0.0" y="91" width="433.33333333333331" height="0.0"/>
+                                <rect key="frame" x="0.0" y="91" width="390" height="0.0"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="aap-jm-yM9"/>
                                 </connections>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Wjs-7C-n6d" userLabel="Show Options Button">
-                                <rect key="frame" x="326" y="104" width="55" height="51"/>
+                                <rect key="frame" x="326" y="104" width="54" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="eCZ-mr-X5V"/>
@@ -54,26 +54,46 @@
                                 </connections>
                             </button>
                             <stackView contentMode="scaleAspectFit" axis="vertical" distribution="equalCentering" baselineRelativeArrangement="YES" id="rX0-Nn-tuX" userLabel="Popup View">
-                                <rect key="frame" x="0.0" y="596" width="389" height="248"/>
+                                <rect key="frame" x="0.0" y="596" width="388" height="248"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="z5W-Z0-RBG" userLabel="Menu View">
-                                        <rect key="frame" x="0.0" y="0.0" width="389" height="34.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="388" height="34.333333333333336"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dsm-vo-ZnV">
                                                 <rect key="frame" x="0.0" y="0.0" width="111" height="34.333333333333336"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ytG-u9-zL0">
-                                                <rect key="frame" x="314" y="0.0" width="75" height="34.333333333333336"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" role="destructive" translatesAutoresizingMaskIntoConstraints="NO" id="ytG-u9-zL0">
+                                                <rect key="frame" x="338.33333333333331" y="0.0" width="49.666666666666686" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="xmark.circle.fill" catalog="system">
+                                                    <color key="baseForegroundColor" systemColor="opaqueSeparatorColor"/>
+                                                </buttonConfiguration>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="5cS-8u-kT7" userLabel="Selection View">
-                                        <rect key="frame" x="0.0" y="74.333333333333329" width="389" height="173.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="74.333333333333329" width="388" height="173.66666666666669"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zz-Ay-LQ2">
+                                                <rect key="frame" x="0.0" y="0.0" width="187.66666666666666" height="173.66666666666666"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Normal"/>
+                                                <connections>
+                                                    <action selector="setNormalMapView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bve-GV-s6C"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fj1-xg-al0">
+                                                <rect key="frame" x="187.66666666666663" y="0.0" width="200.33333333333337" height="173.66666666666666"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Satellite"/>
+                                                <connections>
+                                                    <action selector="setSatelliteMapView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JP8-Kx-9g9"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
                                     </stackView>
                                 </subviews>
                                 <viewLayoutGuide key="safeArea" id="nbE-Gy-CVF"/>
@@ -134,11 +154,15 @@
     <resources>
         <image name="map.fill" catalog="system" width="128" height="110"/>
         <image name="square.fill" catalog="system" width="128" height="114"/>
+        <image name="xmark.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
