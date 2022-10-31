@@ -58,6 +58,11 @@ class ViewController: UIViewController, MKMapViewDelegate {
     }
     
     
+    @IBAction func closeMenuModal(_ sender: UIButton) {
+        StackView.isHidden = true
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
