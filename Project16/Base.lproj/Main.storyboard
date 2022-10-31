@@ -53,8 +53,9 @@
                                     <action selector="updateMapView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hwq-ji-Jdk"/>
                                 </connections>
                             </button>
-                            <stackView contentMode="scaleAspectFit" axis="vertical" distribution="equalCentering" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rX0-Nn-tuX" userLabel="Popup View">
+                            <stackView contentMode="scaleAspectFit" axis="vertical" distribution="equalCentering" baselineRelativeArrangement="YES" id="rX0-Nn-tuX" userLabel="Popup View">
                                 <rect key="frame" x="0.0" y="594" width="390" height="216"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="z5W-Z0-RBG" userLabel="Menu View">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="34.333333333333336"/>
@@ -77,10 +78,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="5cS-8u-kT7" userLabel="Selection View">
-                                        <rect key="frame" x="0.0" y="64.666666666666629" width="390" height="151"/>
+                                        <rect key="frame" x="0.0" y="64.666666666666671" width="390" height="151.33333333333331"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zz-Ay-LQ2">
-                                                <rect key="frame" x="0.0" y="0.0" width="188.66666666666666" height="151"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="188.66666666666666" height="151.33333333333334"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Normal"/>
                                                 <connections>
@@ -88,7 +89,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fj1-xg-al0">
-                                                <rect key="frame" x="188.66666666666663" y="0.0" width="201.33333333333337" height="151"/>
+                                                <rect key="frame" x="188.66666666666663" y="0.0" width="201.33333333333337" height="151.33333333333334"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Satellite"/>
                                                 <connections>
@@ -101,7 +102,7 @@
                                 <viewLayoutGuide key="safeArea" id="nbE-Gy-CVF"/>
                                 <color key="backgroundColor" systemColor="systemGrayColor"/>
                                 <constraints>
-                                    <constraint firstItem="5cS-8u-kT7" firstAttribute="height" secondItem="rX0-Nn-tuX" secondAttribute="height" multiplier="0.7" id="Zi5-mS-Umv"/>
+                                    <constraint firstItem="5cS-8u-kT7" firstAttribute="height" secondItem="rX0-Nn-tuX" secondAttribute="height" multiplier="0.7" id="lOH-Q2-wfT"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -117,7 +118,7 @@
                             <constraint firstItem="gOL-Sl-gAw" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="Jj9-Ls-f3U"/>
                             <constraint firstItem="rX0-Nn-tuX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="WQl-o0-Vci"/>
                             <constraint firstItem="gOL-Sl-gAw" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" id="Yk1-hI-mMH"/>
-                            <constraint firstItem="rX0-Nn-tuX" firstAttribute="leading" secondItem="gOL-Sl-gAw" secondAttribute="leading" id="Zhx-tw-Oy3"/>
+                            <constraint firstItem="rX0-Nn-tuX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Zhx-tw-Oy3"/>
                             <constraint firstItem="rX0-Nn-tuX" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="bEn-fQ-D9o"/>
                             <constraint firstItem="gOL-Sl-gAw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gNJ-J3-zUc"/>
                             <constraint firstItem="gOL-Sl-gAw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hcf-Sa-8Mr"/>
