@@ -14,18 +14,18 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project16" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gOL-Sl-gAw">
-                                <rect key="frame" x="0.0" y="91" width="390" height="0.0"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gOL-Sl-gAw">
+                                <rect key="frame" x="0.0" y="62.666666666666686" width="390" height="719"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="aap-jm-yM9"/>
                                 </connections>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Wjs-7C-n6d" userLabel="Show Options Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Wjs-7C-n6d" userLabel="Show Options Button">
                                 <rect key="frame" x="326" y="104" width="54" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -53,12 +53,11 @@
                                     <action selector="updateMapView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hwq-ji-Jdk"/>
                                 </connections>
                             </button>
-                            <stackView contentMode="scaleAspectFit" axis="vertical" distribution="equalCentering" baselineRelativeArrangement="YES" id="rX0-Nn-tuX" userLabel="Popup View">
-                                <rect key="frame" x="0.0" y="596" width="388" height="248"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <stackView contentMode="scaleAspectFit" axis="vertical" distribution="equalCentering" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rX0-Nn-tuX" userLabel="Popup View">
+                                <rect key="frame" x="0.0" y="594" width="390" height="216"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="z5W-Z0-RBG" userLabel="Menu View">
-                                        <rect key="frame" x="0.0" y="0.0" width="388" height="34.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="34.333333333333336"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dsm-vo-ZnV">
                                                 <rect key="frame" x="0.0" y="0.0" width="111" height="34.333333333333336"/>
@@ -66,7 +65,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" role="destructive" translatesAutoresizingMaskIntoConstraints="NO" id="ytG-u9-zL0">
-                                                <rect key="frame" x="338.33333333333331" y="0.0" width="49.666666666666686" height="34.333333333333336"/>
+                                                <rect key="frame" x="340.33333333333331" y="0.0" width="49.666666666666686" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="xmark.circle.fill" catalog="system">
                                                     <color key="baseForegroundColor" systemColor="opaqueSeparatorColor"/>
@@ -78,10 +77,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="5cS-8u-kT7" userLabel="Selection View">
-                                        <rect key="frame" x="0.0" y="74.333333333333329" width="388" height="173.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="64.666666666666629" width="390" height="151"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zz-Ay-LQ2">
-                                                <rect key="frame" x="0.0" y="0.0" width="187.66666666666666" height="173.66666666666666"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="188.66666666666666" height="151"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Normal"/>
                                                 <connections>
@@ -89,7 +88,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fj1-xg-al0">
-                                                <rect key="frame" x="187.66666666666663" y="0.0" width="200.33333333333337" height="173.66666666666666"/>
+                                                <rect key="frame" x="188.66666666666663" y="0.0" width="201.33333333333337" height="151"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Satellite"/>
                                                 <connections>
@@ -102,8 +101,6 @@
                                 <viewLayoutGuide key="safeArea" id="nbE-Gy-CVF"/>
                                 <color key="backgroundColor" systemColor="systemGrayColor"/>
                                 <constraints>
-                                    <constraint firstItem="z5W-Z0-RBG" firstAttribute="width" secondItem="nbE-Gy-CVF" secondAttribute="width" multiplier="0.8" id="Htz-GM-626"/>
-                                    <constraint firstItem="z5W-Z0-RBG" firstAttribute="centerX" secondItem="nbE-Gy-CVF" secondAttribute="centerX" id="XD8-FX-mhV"/>
                                     <constraint firstItem="5cS-8u-kT7" firstAttribute="height" secondItem="rX0-Nn-tuX" secondAttribute="height" multiplier="0.7" id="Zi5-mS-Umv"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -116,12 +113,16 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="gOL-Sl-gAw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5jQ-0D-3bl"/>
-                            <constraint firstItem="gOL-Sl-gAw" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="Dxw-9e-s8e"/>
-                            <constraint firstItem="Wjs-7C-n6d" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="aTt-97-Ndy"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wjs-7C-n6d" secondAttribute="trailing" constant="10" id="miE-6T-IlN"/>
-                            <constraint firstItem="gOL-Sl-gAw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ofE-Cc-LLH"/>
-                            <constraint firstItem="gOL-Sl-gAw" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" id="utk-cc-ZTX"/>
+                            <constraint firstItem="rX0-Nn-tuX" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.3" id="7dZ-Ut-oqc"/>
+                            <constraint firstItem="gOL-Sl-gAw" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="Jj9-Ls-f3U"/>
+                            <constraint firstItem="rX0-Nn-tuX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="WQl-o0-Vci"/>
+                            <constraint firstItem="gOL-Sl-gAw" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" id="Yk1-hI-mMH"/>
+                            <constraint firstItem="rX0-Nn-tuX" firstAttribute="leading" secondItem="gOL-Sl-gAw" secondAttribute="leading" id="Zhx-tw-Oy3"/>
+                            <constraint firstItem="rX0-Nn-tuX" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="bEn-fQ-D9o"/>
+                            <constraint firstItem="gOL-Sl-gAw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gNJ-J3-zUc"/>
+                            <constraint firstItem="gOL-Sl-gAw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hcf-Sa-8Mr"/>
+                            <constraint firstItem="rX0-Nn-tuX" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="jno-k3-z7U"/>
+                            <constraint firstItem="gOL-Sl-gAw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nyc-cY-nGT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="UJL-tH-94d"/>
