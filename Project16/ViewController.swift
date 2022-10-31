@@ -54,7 +54,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
     
     
     @IBAction func setSatelliteMapView(_ sender: UIButton) {
-        mapView.preferredConfiguration = MKImageryMapConfiguration()
+        mapView.preferredConfiguration = MKHybridMapConfiguration()
     }
     
     
