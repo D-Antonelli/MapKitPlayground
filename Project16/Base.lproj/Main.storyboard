@@ -98,7 +98,7 @@
                                                 <rect key="frame" x="194" y="0.0" width="176" height="150.33333333333334"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Satellite" cornerStyle="dynamic">
-                                                    <backgroundConfiguration key="background" cornerRadius="16" image="hybrid 1">
+                                                    <backgroundConfiguration key="background" cornerRadius="16" image="hybrid 1" imageContentMode="scaleAspectFill">
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleBody"/>
