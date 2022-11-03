@@ -42,6 +42,14 @@ class ViewController: UIViewController, MKMapViewDelegate {
     
     @IBAction func updateMapView(_ sender: UIButton) {
         StackView.isHidden = false
+        ViewButton.isHidden = true
+        let overlayView: UIView = UIView(frame: CGRect(x: 0,
+                                                       y: 0,
+                                                       width: self.mapView.frame.size.width,
+                                                       height: self.mapView.frame.size.height))
+        overlayView.tag = 100
+        overlayView.backgroundColor = UIColor.black.withAlphaComponent(0.3)
+        self.mapView.addSubview(overlayView)
     }
     
     
@@ -58,6 +66,10 @@ class ViewController: UIViewController, MKMapViewDelegate {
     
     @IBAction func closeMenuModal(_ sender: UIButton) {
         StackView.isHidden = true
+        ViewButton.isHidden = false
+        if let viewWithTag = self.mapView.viewWithTag(100) {
+                viewWithTag.removeFromSuperview()
+            }
     }
     
     

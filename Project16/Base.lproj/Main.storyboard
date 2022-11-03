@@ -68,7 +68,8 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" role="destructive" translatesAutoresizingMaskIntoConstraints="NO" id="ytG-u9-zL0">
                                                 <rect key="frame" x="320.33333333333331" y="0.0" width="49.666666666666686" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="xmark.circle.fill" catalog="system">
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <imageReference key="image" image="xmark.circle.fill" catalog="system" symbolScale="large"/>
                                                     <color key="baseForegroundColor" systemColor="opaqueSeparatorColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
