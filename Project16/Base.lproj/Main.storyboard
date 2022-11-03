@@ -80,34 +80,56 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="5cS-8u-kT7" userLabel="Selection View">
                                         <rect key="frame" x="12" y="52.666666666666671" width="370" height="150.33333333333331"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zz-Ay-LQ2">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="15Q-Gh-7rA">
                                                 <rect key="frame" x="0.0" y="0.0" width="176" height="150.33333333333334"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Explore" cornerStyle="dynamic" titleAlignment="center">
-                                                    <backgroundConfiguration key="background" cornerRadius="16" image="standart 1" imageContentMode="scaleAspectFill">
+                                                <subviews>
+                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" semanticContentAttribute="playback" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zz-Ay-LQ2" colorLabel="IBBuiltInLabel-Gray">
+                                                        <rect key="frame" x="0.0" y="0.0" width="176" height="125"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                    </backgroundConfiguration>
-                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleBody"/>
-                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="setNormalMapView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bve-GV-s6C"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fj1-xg-al0">
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="explore" cornerStyle="dynamic" buttonSize="large">
+                                                            <backgroundConfiguration key="background" image="standart 1" imageContentMode="scaleAspectFill"/>
+                                                            <color key="baseForegroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </buttonConfiguration>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                                <color key="value" systemColor="systemBackgroundColor"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="setNormalMapView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bve-GV-s6C"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explore" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bQ-KT-lL4">
+                                                        <rect key="frame" x="0.0" y="130" width="176" height="20.333333333333343"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ZMh-PH-J4a">
                                                 <rect key="frame" x="194" y="0.0" width="176" height="150.33333333333334"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Satellite" cornerStyle="dynamic">
-                                                    <backgroundConfiguration key="background" cornerRadius="16" image="hybrid 1" imageContentMode="scaleAspectFill">
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                    </backgroundConfiguration>
-                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleBody"/>
-                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="setSatelliteMapView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JP8-Kx-9g9"/>
-                                                </connections>
-                                            </button>
+                                                <subviews>
+                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" semanticContentAttribute="spatial" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fj1-xg-al0">
+                                                        <rect key="frame" x="0.0" y="0.0" width="176" height="125"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Satellite" cornerStyle="dynamic">
+                                                            <backgroundConfiguration key="background" image="hybrid 1" imageContentMode="scaleAspectFill"/>
+                                                            <color key="baseForegroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="setSatelliteMapView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JP8-Kx-9g9"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Satellite" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="noo-S0-jWi">
+                                                        <rect key="frame" x="0.0" y="130" width="176" height="20.333333333333343"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
