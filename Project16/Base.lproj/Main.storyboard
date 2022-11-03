@@ -83,7 +83,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zz-Ay-LQ2">
                                                 <rect key="frame" x="0.0" y="0.0" width="176" height="150.33333333333334"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Explore" cornerStyle="dynamic" titleAlignment="automatic">
+                                                <buttonConfiguration key="configuration" style="plain" title="Explore" cornerStyle="dynamic" titleAlignment="center">
                                                     <backgroundConfiguration key="background" cornerRadius="16" image="standart 1" imageContentMode="scaleAspectFill">
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     </backgroundConfiguration>
