@@ -26,7 +26,7 @@
                                 </connections>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Wjs-7C-n6d" userLabel="Show Options Button">
-                                <rect key="frame" x="326" y="104" width="54" height="51"/>
+                                <rect key="frame" x="326" y="103" width="54" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="eCZ-mr-X5V"/>
@@ -54,15 +54,15 @@
                                 </connections>
                             </button>
                             <stackView contentMode="scaleAspectFit" axis="vertical" distribution="equalCentering" baselineRelativeArrangement="YES" id="rX0-Nn-tuX" userLabel="Popup View">
-                                <rect key="frame" x="0.0" y="594" width="390" height="216"/>
+                                <rect key="frame" x="0.0" y="594" width="390" height="215"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="z5W-Z0-RBG" userLabel="Menu View">
                                         <rect key="frame" x="12" y="8" width="370" height="34.333333333333336"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dsm-vo-ZnV">
-                                                <rect key="frame" x="0.0" y="0.0" width="111" height="34.333333333333336"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="121" height="34.333333333333336"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" role="destructive" translatesAutoresizingMaskIntoConstraints="NO" id="ytG-u9-zL0">
@@ -77,21 +77,33 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="5cS-8u-kT7" userLabel="Selection View">
-                                        <rect key="frame" x="12" y="169.66666666666666" width="370" height="34.333333333333343"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="5cS-8u-kT7" userLabel="Selection View">
+                                        <rect key="frame" x="12" y="52.666666666666671" width="370" height="150.33333333333331"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zz-Ay-LQ2">
-                                                <rect key="frame" x="0.0" y="0.0" width="179" height="34.333333333333336"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zz-Ay-LQ2">
+                                                <rect key="frame" x="0.0" y="0.0" width="176" height="150.33333333333334"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Normal"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Explore" cornerStyle="dynamic" titleAlignment="automatic">
+                                                    <backgroundConfiguration key="background" cornerRadius="16" image="standart 1" imageContentMode="scaleAspectFill">
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleBody"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
                                                 <connections>
                                                     <action selector="setNormalMapView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bve-GV-s6C"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fj1-xg-al0">
-                                                <rect key="frame" x="179" y="0.0" width="191" height="34.333333333333336"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fj1-xg-al0">
+                                                <rect key="frame" x="194" y="0.0" width="176" height="150.33333333333334"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Satellite"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Satellite" cornerStyle="dynamic">
+                                                    <backgroundConfiguration key="background" cornerRadius="16" image="hybrid 1">
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleBody"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
                                                 <connections>
                                                     <action selector="setSatelliteMapView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JP8-Kx-9g9"/>
                                                 </connections>
@@ -100,7 +112,10 @@
                                     </stackView>
                                 </subviews>
                                 <viewLayoutGuide key="safeArea" id="nbE-Gy-CVF"/>
-                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="5cS-8u-kT7" firstAttribute="height" secondItem="rX0-Nn-tuX" secondAttribute="height" multiplier="0.7" id="mH1-hh-Wto"/>
+                                </constraints>
                                 <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="12" bottom="12" trailing="8"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -114,9 +129,7 @@
                         <constraints>
                             <constraint firstItem="rX0-Nn-tuX" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.3" id="7dZ-Ut-oqc"/>
                             <constraint firstItem="gOL-Sl-gAw" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="Jj9-Ls-f3U"/>
-                            <constraint firstItem="rX0-Nn-tuX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="WQl-o0-Vci"/>
                             <constraint firstItem="gOL-Sl-gAw" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" id="Yk1-hI-mMH"/>
-                            <constraint firstItem="rX0-Nn-tuX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Zhx-tw-Oy3"/>
                             <constraint firstItem="rX0-Nn-tuX" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="bEn-fQ-D9o"/>
                             <constraint firstItem="gOL-Sl-gAw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gNJ-J3-zUc"/>
                             <constraint firstItem="gOL-Sl-gAw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hcf-Sa-8Mr"/>
@@ -155,8 +168,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="hybrid 1" width="486" height="237"/>
         <image name="map.fill" catalog="system" width="128" height="110"/>
         <image name="square.fill" catalog="system" width="128" height="114"/>
+        <image name="standart 1" width="482" height="228"/>
         <image name="xmark.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -175,9 +190,6 @@
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>

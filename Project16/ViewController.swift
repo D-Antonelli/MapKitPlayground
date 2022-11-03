@@ -42,8 +42,6 @@ class ViewController: UIViewController, MKMapViewDelegate {
     
     @IBAction func updateMapView(_ sender: UIButton) {
         StackView.isHidden = false
-//        action here
-//        mapView.preferredConfiguration = MKImageryMapConfiguration()
     }
     
     
